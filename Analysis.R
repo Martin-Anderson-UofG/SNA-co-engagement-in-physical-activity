@@ -22,6 +22,7 @@ library(stargazer)
 library(psych)
 library(gridExtra)
 library(dplyr)
+library(purrr)
 
 # Set working directory to folder location
 
@@ -256,6 +257,7 @@ networks$alter <- networks$alter %>%
 # add alter degree to the models #
 
 networks$alter$alter_ids <- networks$alter$.altID
+networks$alter$alter_ids
 
 # change networks object to igraph
 i_test <- egor::as_igraph(networks, 
